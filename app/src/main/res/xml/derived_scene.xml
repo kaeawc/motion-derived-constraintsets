@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <StateSet app:defaultState="@id/start" />
+
+    <Transition
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/middle">
+        <OnSwipe
+            app:touchAnchorId="@id/square"
+            app:dragDirection="dragDown"
+            app:touchAnchorSide="top"/>
+    </Transition>
+
+    <Transition
+        app:constraintSetStart="@id/middle"
+        app:constraintSetEnd="@id/end">
+        <OnSwipe
+            app:touchAnchorId="@id/square"
+            app:dragDirection="dragDown"
+            app:touchAnchorSide="top"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@id/square"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/middle" app:deriveConstraintsFrom="@id/start">
+        <Constraint android:id="@id/square"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" >
+            <Transform android:rotation="45" android:translationX="64dp" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end" app:deriveConstraintsFrom="@id/start">
+        <Constraint android:id="@id/square"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" >
+            <PropertySet android:alpha="0.5" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>
