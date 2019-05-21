@@ -38,7 +38,7 @@
             android:layout_height="100dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" >
-            <Transform android:rotation="45" android:translationX="64dp" />
+            <Transform android:rotation="45" />
         </Constraint>
     </ConstraintSet>
 
@@ -46,9 +46,7 @@
         <Constraint android:id="@id/square"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:layout_constraintBottom_toBottomOf="parent" >
-            <PropertySet android:alpha="0.5" />
-        </Constraint>
+            app:layout_constraintBottom_toBottomOf="parent" />
     </ConstraintSet>
 
 </MotionScene>
