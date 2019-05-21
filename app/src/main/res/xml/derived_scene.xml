@@ -44,7 +44,7 @@
         </Constraint>
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/end" app:deriveConstraintsFrom="@id/start">
+    <ConstraintSet android:id="@+id/end" app:deriveConstraintsFrom="@id/middle">
         <Constraint android:id="@id/square"
             android:layout_width="100dp"
             android:layout_height="100dp"
