@@ -37,8 +37,6 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" >
             <Transform android:rotation="45" android:translationX="64dp" />
         </Constraint>
@@ -48,8 +46,6 @@
         <Constraint android:id="@id/square"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" >
             <PropertySet android:alpha="0.5" />
         </Constraint>
