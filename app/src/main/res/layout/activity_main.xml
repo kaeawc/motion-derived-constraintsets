@@ -11,6 +11,7 @@
     <View android:id="@+id/square"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@android:color/holo_blue_dark"/>
+        android:background="@android:color/holo_blue_dark"
+        />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
